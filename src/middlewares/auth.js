@@ -6,7 +6,6 @@ module.exports = (req,res, next) =>{
    if(!token){
         return res.status(401).json({msg:'No hay token,permiso denegado'});
    }
-   console.log(process.env.JWT_SECRET)
    try {
         const cifrado = jwt.verify(token, process.env.JWT_SECRET);
           console.log(cifrado);
