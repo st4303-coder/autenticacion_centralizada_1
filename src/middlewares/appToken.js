@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     }
 
     if (appToken !== process.env.APP_TOKEN_VALUE) {
-        return res.status(401).json({ error: "Unauthorized", message: "oken no valido" });
+        return res.status(401).json({ error: "Unauthorized", message: "Token no valido" });
     }
 
     next();
